@@ -1,0 +1,22 @@
+/**
+ * Example:
+ * url:https://leetcode.com/problems/reverse-integer/description
+ * Reverse digits of an integer.
+ * Example1: x = 123, return 321
+ * Example2: x = -123, return -321
+ */
+
+public class Solution {
+    public int reverse(int x) {
+        if(x > 0){
+            return reverseString(x);
+        }else if(x < 0){
+            return - 1  * reverseString(java.lang.Math.abs(x));
+        }else
+            return 0;
+    }
+    private int reverseString(int mInt){
+        StringBuilder sb = new StringBuilder(mInt + "");
+        return Integer.parseInt(sb.reverse().toString());
+    }
+}
